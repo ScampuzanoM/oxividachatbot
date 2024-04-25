@@ -1,0 +1,42 @@
+{
+    "lista_enfermedades": "1. Cancer\n 2. Dolor cronico - Fibromagia \n 3. Dolor de cabeza - Migraña\n 4.Problemas de sueño - Insomnio\n 5. Problemas renales\n 6. Gases inflamacion intestinal\n 7. Estres y ansiedad\n 8. Otra"
+    ,
+    "detalle_servicios": [
+        {
+            "id": 1,
+            "titulo": "Cancer",
+            "descripcion": "La ..............." ,
+            "costo": 94000 
+        },
+        {
+            "id": 2,
+            "titulo": "Dolor Cronico",
+            "descripcion": "",
+            "costo": 80000 
+        },
+        {
+            "id": 3,
+            "titulo": "Fibromagia",
+            "descripcion": "La Fibromagia...............",
+            "costo": 100000 
+        },
+        {
+            "id": 4,
+            "titulo": "Dolor de cabeza - Migraña",
+            "descripcion": "La ................",
+            "costo": 100000 
+        },
+        {
+            "id": 5,
+            "titulo": "Problemas de sueño - Insomnio",
+            "descripcion": "La ................",
+            "costo": 100000 
+        },
+        {
+            "id": 6,
+            "titulo": "Problemas renales",
+            "descripcion": "La ................",
+            "costo": 100000 
+        }
+    ]
+}

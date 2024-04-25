@@ -1,0 +1,7 @@
+node_modules
+# .env
+*_sessions
+*.log
+bot.qr.png
+package-lock.json
+bot.qr.png

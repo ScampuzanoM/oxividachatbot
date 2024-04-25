@@ -1,0 +1,52 @@
+{
+    "sedes":[
+        {
+            "id": 1,
+            "sede":"Poblado",
+            "roles":{
+                "numero_pagos": 573003278599, 
+                "numero_competencias": 573016453429, 
+                "numero_reposicion": 573016471547, 
+                "cambio_horario": 573016455839, 
+                "incapacidad": 573016455839, 
+                "inscripcion_festival": 573016453429, 
+                "PQRS": 573016453429, 
+                "numero_clase_pruebas": 573016471547, 
+                "numero_matriculas": 573016471547 
+            }
+            
+        },
+        {
+            "id": 2,
+            "sede":"Palmas",
+            "roles":{
+                "numero_pagos": 573003278599, 
+                "numero_competencias": 573016453429, 
+                "numero_reposicion": 573243009519, 
+                "cambio_horario": 573243009519,  
+                "incapacidad": 573243009519, 
+                "inscripcion_festival": 573016453429, 
+                "PQRS": 573016453429, 
+                "numero_clase_pruebas": 573243009519,  
+                "numero_matriculas": 573243009519 
+            }
+            
+        },
+        {
+            "id": 3,
+            "sede":"Estadio",
+            "roles":{
+                "numero_pagos": 573003278599, 
+                "numero_competencias": 573016453429, 
+                "numero_reposicion": 573016471547, 
+                "cambio_horario": 573016455839, 
+                "incapacidad": 573016455839, 
+                "inscripcion_festival": 573016453429,
+                "PQRS": 573016453429, 
+                "numero_clase_pruebas": 573016471547, 
+                "numero_matriculas": 573016471547
+            }
+            
+        }
+    ]
+}
