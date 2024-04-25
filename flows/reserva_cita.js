@@ -26,7 +26,7 @@ module.exports = addKeyword('RESERVAR_CITA')
                             {body:`Perfecto, la ${servicio.titulo} tiene un costo de ${servicio.costo}`}
                         ])
                         await flowDynamic([
-                            {body:`la disponibilidad que tenemos es la siguiente:`}
+                            {body:`*la disponibilidad que tenemos es la siguiente:*`}
                         ])
                         await flowDynamic([
                             {body:`https://bit.ly/44mGGCT`}
