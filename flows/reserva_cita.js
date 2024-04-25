@@ -29,7 +29,7 @@ module.exports = addKeyword('RESERVAR_CITA')
                             {body:`la disponibilidad que tenemos es la siguiente:`}
                         ])
                         await flowDynamic([
-                            {body:`https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0XSiHdJnX5o1V2H2GPhE70vWXXs-0V-3gwLlSbZBttTCHt8vYDlMM5lTWo7gWDHD_1Y6bhrJkq`}
+                            {body:`https://bit.ly/44mGGCT`}
                         ])
                         break;
                     }
