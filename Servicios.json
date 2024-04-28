@@ -1,7 +1,7 @@
 {
-    "lista_servicios": "🌟 Nuestros Servicios🌟\n\n 1. Cita valoración\n 2. Oxivenacion\n 3. Ozonoterapia"
+    "menu": "🌟 Nuestros Servicios🌟\n\n 1. Cita valoración\n 2. Oxivenacion\n 3. Ozonoterapia"
     ,
-    "detalle_servicios": [
+    "detalle_menu": [
         {
             "id": 1,
             "titulo": "Cita valoracion",

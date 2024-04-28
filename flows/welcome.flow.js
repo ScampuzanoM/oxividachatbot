@@ -12,7 +12,16 @@ const inactividad = require("./inactividad.flow")
 module.exports = addKeyword(['hola', 'ole', 'alo', 'buenas', 'menu', 'holi', 'hol', 'oe'])
     // module.exports =  addKeyword('BOT')
     .addAnswer('🙌 ¡Hola bienvenid@ a Oxivida!')
-    .addAnswer(['¿Acepta terminos y condiciones?','1. Si','2. No'],
+    .addAnswer('🙌 ¿Cual es tu nombre?', { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
+        async (ctx, { flowDynamic }) => {
+            if (ctx?.idleFallBack) {
+                return gotoFlow(inactividad)
+            } else {
+                const nombre = ctx.body
+                await flowDynamic(`De ahora en adelante te llamare ${nombre}`)
+            }
+        })
+    .addAnswer(['¿Acepta terminos y condiciones?', '1. Si', '2. No'],
         { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
         async (ctx, { flowDynamic, gotoFlow, fallBack }) => {
 
@@ -27,7 +36,7 @@ module.exports = addKeyword(['hola', 'ole', 'alo', 'buenas', 'menu', 'holi', 'ho
                     }
                     case '2': {
                         await flowDynamic([
-                            {body:'Muchas gracias, estamos para servirte, hasta luego!'}
+                            { body: 'Muchas gracias, estamos para servirte, hasta luego!' }
                         ])
                         break;
                     }

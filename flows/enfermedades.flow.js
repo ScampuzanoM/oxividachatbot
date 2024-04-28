@@ -9,9 +9,9 @@ const reserva_citasFlow = require("./reserva_cita")
  */
 const json = require("../enfermedades.json")
 let servicio = null
-mensaje_ppal = json.lista_servicios;
+mensaje_ppal = json.menu;
 
-module.exports = addKeyword('servicios')
+module.exports = addKeyword('ENFERMEDADES_')
     .addAnswer([mensaje_ppal],
         { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
         async (ctx, { state, gotoFlow, fallBack , flowDynamic}) => {
@@ -20,14 +20,15 @@ module.exports = addKeyword('servicios')
                 return gotoFlow(inactividad)
             } else {
                 opcion = ctx.body;
-                if (opcion != '1' && opcion != '2' && opcion != '3') {
+                detalle_menu = json.detalle_menu.find((data) => data.id === Number(opcion));
+                
+                if (opcion > detalle_menu.length){
                     await gotoFlow(defaultFlow)
                     return fallBack()
                 } else {
-                    servicio = json.detalle_servicios.find((servicio) => servicio.id === Number(opcion));
-                    await state.update({ servicio: servicio })
+                    await state.update({ detalle_menu: detalle_menu })
                     await flowDynamic([
-                        {body:  servicio.descripcion}
+                        {body:  detalle_menu.descripcion}
                     ])
                     return gotoFlow(reserva_citasFlow);
                 }

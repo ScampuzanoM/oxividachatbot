@@ -1,7 +1,7 @@
 {
-    "lista_enfermedades": "1. Cancer\n 2. Dolor cronico - Fibromagia \n 3. Dolor de cabeza - Migraña\n 4.Problemas de sueño - Insomnio\n 5. Problemas renales\n 6. Gases inflamacion intestinal\n 7. Estres y ansiedad\n 8. Otra"
+    "menu": "1. Cancer\n 2. Dolor cronico - Fibromagia \n 3. Dolor de cabeza - Migraña\n 4.Problemas de sueño - Insomnio\n 5. Problemas renales\n 6. Gases inflamacion intestinal\n 7. Estres y ansiedad\n 8. Otra"
     ,
-    "detalle_servicios": [
+    "detalle_menu": [
         {
             "id": 1,
             "titulo": "Cancer",

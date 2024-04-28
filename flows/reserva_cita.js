@@ -7,11 +7,11 @@ const inactividad = require("./inactividad.flow")
  * Flujo de bienvenida
  */
 
-const json = require("../Servicios.json")
+
 let mensaje = null
 
 module.exports = addKeyword('RESERVAR_CITA')
-    .addAnswer(['¿desea agendar una cita?','1. Si ','2. No'],
+    .addAnswer(['¿desea agendar una cita?', '1. Si ', '2. No'],
         { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
         async (ctx, { state, flowDynamic, gotoFlow, fallBack }) => {
 
@@ -19,23 +19,30 @@ module.exports = addKeyword('RESERVAR_CITA')
                 return gotoFlow(inactividad)
             } else {
                 opcion = ctx.body;
-                const servicio = state.get('servicio')
+                const detalle_menu = state.get('detalle_menu')
                 switch (opcion) {
                     case '1': {
                         await flowDynamic([
-                            {body:`Perfecto, la ${servicio.titulo} tiene un costo de ${servicio.costo}`}
+                            { body: `Perfecto, la cita de "${detalle_menu.titulo} " tiene un costo de ${detalle_menu.costo}` }
                         ])
                         await flowDynamic([
-                            {body:`*la disponibilidad que tenemos es la siguiente:*`}
+                            { body: `*Puedes reservar tu cita en el siguiente link:*` }
                         ])
                         await flowDynamic([
-                            {body:`https://bit.ly/44mGGCT`}
+                            { body: `https://bit.ly/44mGGCT` }
+                        ])
+                        
+                        await flowDynamic([
+                            { body: `*Muchas gracias, recuerda reservar tu cita, estamos para servirte, hasta luego!*` , delay: Number(process.env.TIEMPO_RESERVA_CITA)}
+                        ])
+                        await flowDynamic([
+                            { body: `*Link de reserva:* https://bit.ly/44mGGCT`}
                         ])
                         break;
                     }
                     case '2': {
                         await flowDynamic([
-                            {body:'Muchas gracias, estamos para servirte, hasta luego!'}
+                            { body: 'Muchas gracias, estamos para servirte, hasta luego!' }
                         ])
                         break;
                     }
@@ -50,7 +57,7 @@ module.exports = addKeyword('RESERVAR_CITA')
     .addAnswer(null, { capture: false },
         async (ctx, { flowDynamic }) => {
             await flowDynamic([
-                {body:  mensaje.mensaje}
+                { body: mensaje.mensaje }
             ])
             return null;
         }

@@ -1,7 +1,8 @@
 const { addKeyword, EVENTS } = require("@bot-whatsapp/bot");
 const serviciosFlow = require("./servicios.flow");
 const defaultFlow = require("./default.flow");
-const inactividad = require("./inactividad.flow")
+const inactividad = require("./inactividad.flow");
+const enfermedadesFlow = require("./enfermedades.flow");
 
 /**
  * Punto de Entrada!
@@ -25,7 +26,7 @@ module.exports = addKeyword('MENU_PPAL')
                         break;
                     }
                     case '2': {
-                        gotoFlow(serviciosFlow)
+                        gotoFlow(enfermedadesFlow)
                         break;
                     }
                     case '3': {
