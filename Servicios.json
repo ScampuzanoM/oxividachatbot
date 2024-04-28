@@ -18,13 +18,37 @@
             "id": 3,
             "titulo": "Ozonoterapia",
             "descripcion": "El ozono favorece el metabolismo de las células y potencializa la acción del oxígeno en los tejidos. Es un potente antioxidante, inmunorregulador, antiinflamatorio. Una excelente opción para rejuvenecer sistémicamente.",
-            "costo": 100000
+            "costo": 140.000
         },
         {
             "id": 4,
-            "titulo": "Ozonoterapia",
-            "descripcion": "El ozono favorece el metabolismo de las células y potencializa la acción del oxígeno en los tejidos. Es un potente antioxidante, inmunorregulador, antiinflamatorio. Una excelente opción para rejuvenecer sistémicamente.",
-            "costo": 100000
+            "titulo": "Megadosis de Vitamina C",
+            "descripcion": "Este tratamiento permite una distribución homogénea de concentraciones elevadas de vitamina C por todas las células aprovechando el 100% de sus propiedades, lo que no se consigue por vía oral.",
+            "costo": 140.000
+        },
+        {
+            "id": 5,
+            "titulo": "La Terapia Neural",
+            "descripcion": "La Terapia Neural consiste en la aplicación de pequeñas dosis de anestésicos locales en puntos específicos del cuerpo con el fin de entregarle a las células una carga de energía capaz de desbloquear el campo interferente. Los efectos en el organismo son logrados a nivel local y sistémico a través del sistema nervioso, es muy efectiva tanto en enfermedades agudas como crónicas.",
+            "costo": 140.000
+        },
+        {
+            "id": 6,
+            "titulo": "La Terapia Neural",
+            "descripcion": "La Terapia Neural consiste en la aplicación de pequeñas dosis de anestésicos locales en puntos específicos del cuerpo con el fin de entregarle a las células una carga de energía capaz de desbloquear el campo interferente. Los efectos en el organismo son logrados a nivel local y sistémico a través del sistema nervioso, es muy efectiva tanto en enfermedades agudas como crónicas.",
+            "costo": 140.000
+        },
+        {
+            "id": 7,
+            "titulo": "Los campos de magnéticos",
+            "descripcion": "Inducen ondas electromagnéticas que penetran las células y generan cambios significativos, las equilibran y permiten que recuperen su potencial y su función. Esta técnica no se aplica sola, es complementaria de las otras terapias y está ligada a tratamientos formulados. Cuando es aplicada conjuntamente con otras técnicas como la Oxivenación, la Ozonoterapia o la Terapia Neural, se potencia el efecto de las técnicas. El tratamiento no genera dolor y tampoco es invasivo.",
+            "costo": 140.000
+        },
+        {
+            "id": 8,
+            "titulo": "Punto del Bebé Feliz",
+            "descripcion": "En la medicina tradicional china existe un punto que ha sido denominado «el punto del bebé feliz» que, al estimular, consigue ayudar a la madre gestante a lograr un equilibrio para transmitir al bebé información positiva para obtener lo mejor de ella.",
+            "costo": 140.000
         }
     ]
 }

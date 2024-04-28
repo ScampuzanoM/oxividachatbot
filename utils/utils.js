@@ -1,25 +1,20 @@
-const { downloadMediaMessage } = require('@whiskeysockets/baileys');
-const fs = require('node:fs/promises');
-const { convertOggMp3 } = require('../services/convert');
-const { voiceToText } = require('../services/whisper');
 
-const handlerAI = async (ctx) => {
-  /**
-   * OMITIR
-   */
-  const buffer = await downloadMediaMessage(ctx, "buffer");
-  const pathTmpOgg = `${process.cwd()}/tmp/voice-note-${Date.now()}.ogg`;
-  const pathTmpMp3 = `${process.cwd()}/tmp/voice-note-${Date.now()}.mp3`;
-  await fs.writeFile(pathTmpOgg, buffer);
-  await convertOggMp3(pathTmpOgg, pathTmpMp3);
-  const text = await voiceToText(pathTmpMp3);
-  return text; //el habla1!!
-  /**
-   * OMITIR
-   */
-};
+
+function listarServicios(servicios) {
+  // Verificamos que servicios es un array y que todos los elementos tienen un id numérico
+  if (!Array.isArray(servicios) || !servicios.every(servicio => typeof servicio.id === 'number')) {
+      console.error('El argumento proporcionado debe ser un array de objetos, y cada objeto debe tener un id numérico.');
+      return; // Detenemos la ejecución de la función
+  }
+  // Ordenamos los servicios por ID
+  servicios.sort((a, b) => a.id - b.id);
+  // Creamos un texto con cada servicio, mostrando su ID y su título
+  const resultado = servicios.map(servicio => `${servicio.id}. ${servicio.titulo}`).join('\n');
+
+  return resultado;
+}
 
 const delay = (miliseconds) =>
   new Promise((res) => setTimeout(res, miliseconds));
 
-module.exports = { handlerAI, delay };
+module.exports = { delay, listarServicios};
