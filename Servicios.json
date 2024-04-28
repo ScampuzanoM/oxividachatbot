@@ -1,24 +1,30 @@
 {
-    "menu": "🌟 Nuestros Servicios🌟\n\n 1. Cita valoración\n 2. Oxivenacion\n 3. Ozonoterapia"
+    "menu": "🌟 Nuestros Servicios🌟\n\n 1. Cita valoración\n 2. Oxivenacion\n 3. Ozonoterapia\n 4. Ozonoterapia"
     ,
     "detalle_menu": [
         {
             "id": 1,
-            "titulo": "Cita valoracion",
+            "titulo": "🏥 Cita valoracion",
             "descripcion": "La cita de valoracion .........................................",
-            "costo": 94000 
+            "costo": 94000
         },
         {
             "id": 2,
-            "titulo": "Oxyvenacion",
-            "descripcion": "Es una tecnica alemana que devuelve el oxigeno a las celulas, revitaliza los tejidos, rejuvenece los organos y mejora el desempeño general de las funcionesorganicas. Es ideal para personas con enfermedades cardiorespiratorias, neurologicas vasculares gastrointestinales insificencias hepaticas y renales, con cancer, con transtornos inmunitarios y endocrinos",
-            "costo": 80000 
+            "titulo": "🔍 Oxyvenacion",
+            "descripcion": "Es en una técnica Alemana que devuelve el oxígeno a las células, revitaliza los tejidos, rejuvenece los órganos y mejora el desempeño general de las funciones orgánicas. Es ideal para personas con enfermedades cardiorrespiratorias, neurológicas, vasculares, gastrointestinales, insuficiencias hepáticas y renales; con cáncer, con trastornos inmunitarios y endocrinos, con alergias y enfermedades de la piel. Muy recomendado para deportistas y madres gestantes. Esta técnica ayuda a potenciar el cuerpo por lo que ofrece beneficios para todo tipo de personas.",
+            "costo": 140.000
         },
         {
             "id": 3,
             "titulo": "Ozonoterapia",
-            "descripcion": "La Ozonoterapia...............",
-            "costo": 100000 
+            "descripcion": "El ozono favorece el metabolismo de las células y potencializa la acción del oxígeno en los tejidos. Es un potente antioxidante, inmunorregulador, antiinflamatorio. Una excelente opción para rejuvenecer sistémicamente.",
+            "costo": 100000
+        },
+        {
+            "id": 4,
+            "titulo": "Ozonoterapia",
+            "descripcion": "El ozono favorece el metabolismo de las células y potencializa la acción del oxígeno en los tejidos. Es un potente antioxidante, inmunorregulador, antiinflamatorio. Una excelente opción para rejuvenecer sistémicamente.",
+            "costo": 100000
         }
     ]
 }
