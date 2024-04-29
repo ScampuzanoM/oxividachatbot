@@ -22,7 +22,7 @@ const inactividad = require("./inactividad.flow")
             //     await flowDynamic(`De ahora en adelante te llamare ${nombre}`)
             // }
         })
-    .addAnswer(['¿Acepta terminos y condiciones?', '1. Si', '2. No'],
+    .addAnswer([`¿${nombre} Acepta terminos y condiciones?', '1. Si', '2. No'`],
         { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
         async (ctx, { flowDynamic, gotoFlow, fallBack }) => {
 
