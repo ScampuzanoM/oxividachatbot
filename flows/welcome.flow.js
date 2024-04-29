@@ -17,10 +17,10 @@ const inactividad = require("./inactividad.flow")
             if (ctx?.idleFallBack) {
                 return gotoFlow(inactividad)
             }
-            // else {
-            //     const nombre = ctx.body
-            //     await flowDynamic(`De ahora en adelante te llamare ${nombre}`)
-            // }
+            else {
+                const nombre = ctx.body
+            //    await flowDynamic(`De ahora en adelante te llamare ${nombre}`)
+            }
         })
     .addAnswer([`¿${nombre} Acepta terminos y condiciones?', '1. Si', '2. No'`],
         { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
