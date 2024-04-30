@@ -28,9 +28,11 @@ module.exports = addKeyword('SERVICIOS_')
                     await gotoFlow(defaultFlow)
                     return fallBack()
                 } else {
+                    const myState = state.getMyState();
+
                     await state.update({ detalle_menu: detalle_menu })
                     await flowDynamic([
-                        {body:  detalle_menu.descripcion}
+                        {body: myState.nombre +', '+ detalle_menu.descripcion}
                     ])
                     return gotoFlow(reserva_citasFlow);
                 }

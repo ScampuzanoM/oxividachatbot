@@ -20,10 +20,11 @@ module.exports = addKeyword('RESERVAR_CITA')
             } else {
                 opcion = ctx.body;
                 const detalle_menu = state.get('detalle_menu')
+                const nombre = state.get('nombre');
                 switch (opcion) {
                     case '1': {
                         await flowDynamic([
-                            { body: `Perfecto, la cita de "${detalle_menu.titulo} " tiene un costo de ${detalle_menu.costo}` }
+                            { body: `Perfecto,${nombre} la cita de ${detalle_menu.titulo} tiene un costo de ${detalle_menu.costo}` }
                         ])
                         await flowDynamic([
                             { body: `*Puedes reservar tu cita en el siguiente link:*` }
@@ -31,9 +32,9 @@ module.exports = addKeyword('RESERVAR_CITA')
                         await flowDynamic([
                             { body: `https://bit.ly/44mGGCT` }
                         ])
-                        
+
                         await flowDynamic([
-                            { body: `*Muchas gracias, recuerda reservar tu cita, estamos para servirte, hasta luego!*` , delay: Number(process.env.TIEMPO_RESERVA_CITA)}
+                            { body: `*"${nombre}" muchas gracias, recuerda reservar tu cita, estamos para servirte, hasta luego!*` , delay: Number(process.env.TIEMPO_RESERVA_CITA)}
                         ])
                         await flowDynamic([
                             { body: `*Link de reserva:* https://bit.ly/44mGGCT`}
