@@ -9,8 +9,8 @@ const inactividad = require("./inactividad.flow")
  * Flujo de bienvenida
  */
 
-  //  module.exports = addKeyword(['hola', 'ole', 'alo', 'buenas', 'menu', 'holi', 'hol', 'oe'])
-     module.exports =  addKeyword('BOT')
+   module.exports = addKeyword(['hola', 'ole', 'alo', 'buenas', 'menu', 'holi', 'hol', 'oe'])
+   //  module.exports =  addKeyword('BOT')
     .addAnswer('Hola, 👋 bienvenid@ a la Clínica Oxivida. Somos un centro clínico de medicina complementaria especializado en terapias con oxígeno. Nuestro propósito es sanar con amor ❤️ y nos gusta cuidar de nuestros pacientes y de su tiempo, así que estamos aquí leyéndote.')
     .addAnswer('🙌 ¿Cual es tu nombre?', { capture: true, idle: Number(process.env.TIEMPO_INACTIVIDAD) },
         async (ctx, {state, flowDynamic,gotoFlow }) => {
